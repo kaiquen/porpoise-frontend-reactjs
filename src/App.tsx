@@ -1,10 +1,18 @@
-import "./global.scss"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const App = ()=>  {
+import './global.scss'
+
+import Home from './pages/home/intex';
+import Login from './pages/login';
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
