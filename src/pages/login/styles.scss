@@ -3,17 +3,12 @@
 .container {
   width:  100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
-  width: 100%;
-  height: calc(100% - 5rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.formBox {
   background-color: $colorprimarylight;
   width: 40rem;
   margin: 0 auto;

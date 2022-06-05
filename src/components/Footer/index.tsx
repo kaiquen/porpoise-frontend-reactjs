@@ -5,7 +5,6 @@ import { FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer">
-
       <ul className="footer__items">
         <div className="footer__items__socials">
 
