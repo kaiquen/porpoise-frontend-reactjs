@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './global.scss'
 
-import Home from './pages/home/intex';
+import Home from './pages/home';
 import Login from './pages/login';
 
 const App = () => {
