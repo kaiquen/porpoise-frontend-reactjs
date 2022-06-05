@@ -1,3 +1,4 @@
+import { BsFillStarFill } from 'react-icons/bs';
 import { Card } from '../Card';
 import './styles.scss';
 
@@ -9,9 +10,22 @@ const Produto = () => {
           <h3>Camisa Fluminense</h3>
           <div className="product__items__left__review">
             <h5>5.00</h5>
-            <p>1000 avaliações</p>
+            <BsFillStarFill />
+            <BsFillStarFill />
+            <BsFillStarFill />
+            <BsFillStarFill />
+
           </div>
-          <p>Description</p>
+          <div className="product__items__left__description">
+            <p>Description</p>
+            <ul>
+              <li>Departamento BS: Esporte</li>
+              <li>Indicado para: Dia a Dia</li>
+              <li>Estilo da Peça: Com logo</li>
+              <li>Material Interno: Têxtil</li>
+              <li>Altura do Cano: Cano Baixo</li>
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -4,41 +4,47 @@
   display: flex;
   justify-content: space-evenly;
 
-
+  background-color: $colorprimarydark;
 
   &__left {
     flex: 1;
     padding-top: 2rem;
     margin-left: 4rem;
-    line-height: 2.6rem;
+    display: flex;
 
 
     &__title {
       display: flex;
-      color: $colorprimary;
+
+      color: $colorgreylight1;
+
       flex: 2;
 
       flex-direction: column;
-      font-size: 1.2rem;
+
       font-weight: 600;
 
       h3 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         letter-spacing: 0.04rem;
       }
     }
 
     &__review {
       display: flex;
-      align-items: flex-end;
 
-      p {
-        font-size: 0.8rem;
-      }
+      text-align: center;
 
       h5 {
         font-size: 1.4rem;
+        margin-right: 0.2rem;
       }
+    }
+
+    &__description ul {
+      line-height: 1.2rem;
+      font-size: 0.7;
+      font-weight: 400;
     }
 
   }
@@ -53,19 +59,24 @@
     img {
       height: 100%;
       width: 100%;
+      border-radius: 0.4rem;
     }
   }
 
   &__right {
     font-size: 1.2rem;
-    flex: 1;
+    flex: 0.8;
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
 
+    p {
+      color: #fff;
+
+    }
 
     h3 {
-      color: $colorprimary;
+      color: #fff;
       font-weight: 600;
     }
 
