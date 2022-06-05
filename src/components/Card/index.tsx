@@ -1,4 +1,5 @@
 import './styles.scss';
+import { BsTagFill } from "react-icons/bs"
 
 const Card = () => {
   return (
@@ -9,7 +10,7 @@ const Card = () => {
       <div className="product__info">
 
         <div className="product__price">
-
+          <BsTagFill />
           <p>R$120,00</p>
         </div>
       </div>

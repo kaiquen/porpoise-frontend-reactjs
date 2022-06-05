@@ -1,18 +1,24 @@
 @import '../../global/variables.scss';
 
 .container {
-  width:  100vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: $colorprimarylight;
+
+  label {
+    font-size: 1.2rem;
+    color: #fff;
+  }
 }
 
 .content {
-  background-color: $colorprimarylight;
-  width: 40rem;
+  background-color: $colorprimarydark;
+  width: 26rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 1.6rem 2rem;
   border-radius: .5rem;
 }
 
@@ -20,24 +26,32 @@
   &__group {
     width: 100%;
     margin-bottom: 1rem;
-    label {
-      font-size: 1.2rem;
-      letter-spacing: 0.1rem;
-      color: #fff;
-    }
+
+    text-align: center;
+
+
 
     input {
-      margin-top: 1rem ;
+
+      margin-top: 1rem;
       width: 100%;
       height: 2rem;
       border: none;
       border-radius: .2rem;
       padding: 1rem;
     }
+
+    span {
+      color: #bf4c4c;
+      margin-left: .5rem;
+      font-weight: 400;
+      letter-spacing: .1rem;
+    }
   }
 
   &__btn {
-    width:  100%;
+
+    width: 40%;
     background-color: $colorprimary;
     color: #fff;
     border: none;
