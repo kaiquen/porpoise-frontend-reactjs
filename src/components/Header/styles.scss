@@ -1,0 +1,66 @@
+@import '../../global/variables.scss';
+
+.header {
+  height: 5rem;
+  background-color: $colorprimary;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $colorgreydark1;
+
+  .logo {
+
+    margin-left: 2rem;
+    align-items: center;
+
+  }
+
+  .title h3 {
+    color: #eee;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    letter-spacing: 0.1rem;
+
+
+
+    .navbaritem a {
+      list-style: none;
+
+      font-size: 1.2rem;
+
+      color: #eee;
+      transition: all 0.3 ease 0s;
+      margin-right: 2rem;
+      position: relative;
+      padding: 0 10px;
+
+    }
+
+    .navbaritem a:after {
+      content: "";
+      position: absolute;
+      background-color: $colorgreylight1;
+      height: 3px;
+      width: 0%;
+      left: 0%;
+      bottom: -10px;
+      transition: 0.3s;
+
+    }
+
+    .navbaritem a:hover::after {
+      //color: $colorgreydark;
+      background-color: $colorgreylight1;
+      width: 100%;
+    }
+  }
+
+}

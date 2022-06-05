@@ -1,17 +1,57 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import '../../global/variables.scss';
 
-li,
-a {
-  list-style: none;
-  text-decoration: none;
-}
+.container {
+  background-color: $colorprimarylight;
+  margin: auto;
+  height: 60vh;
+  width: 50vw;
 
-//VARIABLES
-$colorprimarylight: #0096C7;
-$colorprimary: #0077B6;
-$colorprimarydark: #023E8A;
-//VARIABLES
+  &__login {
+    display: flex;
+
+    flex-direction: column;
+    padding: 4rem 10rem 2rem 10rem;
+
+    p {
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      color: #fff;
+    }
+
+    input {
+      margin: 0.4rem 0 1rem 0;
+      height: 1.6rem;
+
+      border: none;
+
+      border-radius: 0.2rem;
+    }
+
+    a {
+      margin-top: 0.4rem;
+      color: #fff;
+    }
+
+    a:hover {
+      color: $colorprimary;
+    }
+
+    &__btn {
+
+      background-color: $colorprimary;
+      color: #fff;
+      border: none;
+      border-radius: 0;
+
+      font-size: 1rem;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $colorprimarydark;
+      }
+    }
+  }
+}
