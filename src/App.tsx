@@ -4,7 +4,7 @@ import './global/global.scss'
 
 import Home from './pages/home';
 import Login from './pages/login';
-import Produto from './pages/produto';
+import Produtos from './pages/produtos';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
-        <Route path="produto" element={<Produto />} />
+        <Route path="produtos" element={<Produtos />} />
       </Routes>
     </BrowserRouter>
   );

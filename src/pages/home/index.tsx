@@ -29,9 +29,9 @@ const Home = () => {
 
 
 
-			<section className="footer">
-				<Footer />
-			</section>
+
+			<Footer />
+
 
 		</>
 	)
