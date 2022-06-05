@@ -36,11 +36,18 @@
   }
 
   &__price {
+    display: flex;
+
     font-size: 1.2rem;
     font-weight: 600;
     margin-left: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     color: #eee;
+
+    p {
+
+      margin-left: 0.4rem;
+    }
   }
 
   &__btn {
