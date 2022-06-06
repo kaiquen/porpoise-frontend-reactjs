@@ -1,17 +1,35 @@
 import './styles.scss';
 import { BsTagFill } from "react-icons/bs"
+import { useNavigate, useRoutes } from 'react-router-dom';
 
-const Card = () => {
+interface IProduct {
+  id:string;
+	image:string;
+	title:string;
+	description:string;
+	brand:string;
+	price:number;
+	size:number;
+	subcategory:string;
+};
+
+const Card = (product:IProduct) => {
+	const navigate = useNavigate();
+
+  const handle = () => {
+    navigate(`/produto/${product.id}`)
+  }
+
   return (
-    <div className="product" >
+    <div className="card" onClick={handle} >
 
-      <img src="./assets/flu.png" alt="" className="product__img" />
-      <h5 className="product__name">Camisa Fluminense</h5>
-      <div className="product__info">
+      <img src={product.image} alt="" className="card__img" />
+      <h5 className="card__name">{product.title}</h5>
+      <div className="card__info">
 
-        <div className="product__price">
+        <div className="card__price">
           <BsTagFill />
-          <p>R$120,00</p>
+          <p>R${product.price}</p>
         </div>
       </div>
 

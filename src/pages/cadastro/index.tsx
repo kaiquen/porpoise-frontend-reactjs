@@ -1,9 +1,17 @@
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import './styles.scss';
+import { useState } from 'react';
 
 
 const Cadastro = () => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [cpf,setCpf] = useState();
+  const [phone, setPhone] =useState();
+  const [birth, setBirth] = useState();
+
   return (
     <>
       <Header />
@@ -18,10 +26,28 @@ const Cadastro = () => {
                 type="text" required
               />
             </div>
-            <label>Email</label>
+            <label>Cpf</label>
             <div className="form__group">
               <input
                 type="text" required
+              />
+            </div>
+            <label>Data de nascimento</label>
+            <div className="form__group">
+              <input
+                type="date" required
+              />
+            </div>
+            <label>Telefone celular</label>
+            <div className="form__group">
+              <input
+                type="tel" required
+              />
+            </div>
+            <label>Email</label>
+            <div className="form__group">
+              <input
+                type="email" required
               />
             </div>
             <label>Senha</label>
@@ -33,7 +59,7 @@ const Cadastro = () => {
             <label>Confirme sua Senha</label>
             <div className="form__group">
               <input
-                type="text" required
+                type="password" required
               />
             </div>
             <div className="form__group">

@@ -4,6 +4,7 @@ import api from "../../services/axios";
 import React, { useState } from "react";
 import { Footer } from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { Input } from "../../components/Input/intex";
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -26,49 +27,40 @@ const Login = () => {
 	};
 
 	return (
-		<>
+		<div className="login">
 			<Header />
-			<div className="container">
 				<div className="content">
-					<h3>Login</h3>
+					<h3 className="heading__primary">Login</h3>
+					
 					<form onSubmit={handleSubmit} className="form">
-						<label>Email</label>
 						<div className="form__group">
-							<input
-								type="text"
-								onChange={(e) => setEmail(e.target.value)}
-								value={email}
-								required
-							/>
+							<Input type='text' label="Email" value={email} setValue={setEmail}/>
 						</div>
-						<label>Senha</label>
-						<div className="form__group">
 
-							<input
-								type="password"
-								onChange={(e) => setPassword(e.target.value)}
-								value={password}
-								required
-							/>
+						<div className="form__group">
+							<Input type='password' label="Senha" value={password} setValue={setPassword}/>
 						</div>
+
 						{error && (
 							<div className="form__group">
 								<span>Credenciais inválidas!</span>
 							</div>
 						)}
+			
 						<div className="form__group">
 							<button type="submit" className="form__btn">
-								Login
+								Entrar
 							</button>
-						</div>
+						</div>						
 					</form>
+
 					<a className="signup" href="/cadastro">
 						Não possui conta? Cadastre-se aqui
 					</a>
 				</div>
-			</div>
+			
 			<Footer />
-		</>
+		</div>
 	);
 };
 
