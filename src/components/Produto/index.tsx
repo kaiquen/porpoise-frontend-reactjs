@@ -1,4 +1,5 @@
-import { BsFillStarFill } from 'react-icons/bs';
+import { BsFillStarFill, BsSearch } from 'react-icons/bs';
+import { ImSearch } from "react-icons/im";
 import { Card } from '../Card';
 import './styles.scss';
 
@@ -17,16 +18,11 @@ const Produto = () => {
 
           </div>
           <div className="product__items__left__description">
-            <p>Description</p>
-            <ul>
-              <li>Departamento BS: Esporte</li>
-              <li>Indicado para: Dia a Dia</li>
-              <li>Estilo da Peça: Com logo</li>
-              <li>Material Interno: Têxtil</li>
-              <li>Altura do Cano: Cano Baixo</li>
-            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum voluptatibus in dolore! Aperiam molestias accusamus libero voluptatum, excepturi ipsam voluptate inventore sapiente dolorum laboriosam iure, aliquam nobis dolores ipsum.</p>
+
           </div>
         </div>
+
       </div>
 
 
@@ -38,9 +34,6 @@ const Produto = () => {
         <h3>R$ 25.000</h3>
         <h3>até 6x de R$ 50.000 sem juros</h3>
         <p>Vendido e Enviado por Porpoise Sports</p>
-
-
-
 
         <div className="product__items__right__sizes">
           <p>Tamanho</p>
@@ -58,6 +51,10 @@ const Produto = () => {
         <div className="product__items__right__sizes">
           <p> Calcular Frete</p>
           <input type="text" />
+          <button className="product__items__right__sizes__icon">
+            <ImSearch />
+          </button>
+
         </div>
 
         <button className="product__items__right__btn">

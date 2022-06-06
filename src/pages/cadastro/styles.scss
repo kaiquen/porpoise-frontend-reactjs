@@ -1,5 +1,6 @@
 @import '../../global/variables.scss';
 
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -19,13 +20,19 @@
   background-color: $colorprimarydark;
   width: 26rem;
   margin: 0 auto;
-  padding: 2rem 2rem 1.6rem 2rem;
+
   border-radius: .5rem;
 
   h3 {
     text-align: center;
     font-size: 1.8rem;
     color: #fff;
+  }
+
+  a {}
+
+  a:hover {
+    color: $colorbackground;
   }
 }
 
@@ -73,12 +80,4 @@
 
     }
   }
-}
-
-.signup {
-  color: #fff;
-}
-
-.signup:hover {
-  color: $colorprimary;
 }

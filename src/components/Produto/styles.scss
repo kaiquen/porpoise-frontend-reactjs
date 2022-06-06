@@ -4,36 +4,43 @@
   display: flex;
   justify-content: space-evenly;
 
-  background-color: $colorprimarydark;
+  background-color: $colorbackground;
+
+  input {
+
+    margin-top: 1rem;
+    width: 40%;
+    height: 1rem;
+    border: none;
+    border-radius: .2rem;
+    padding: 1rem;
+  }
 
   &__left {
-    flex: 1;
-    padding-top: 2rem;
-    margin-left: 4rem;
     display: flex;
-
+    flex: 1;
+    padding-top: 4rem;
+    padding-left: 6rem;
+    display: flex;
+    text-align: start;
 
     &__title {
-      display: flex;
-
       color: $colorgreylight1;
-
-      flex: 2;
-
-      flex-direction: column;
-
       font-weight: 600;
+
 
       h3 {
         font-size: 1.6rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.05rem;
+        margin-bottom: 1rem;
       }
     }
 
     &__review {
       display: flex;
-
       text-align: center;
+      margin-bottom: 1rem;
+
 
       h5 {
         font-size: 1.4rem;
@@ -41,10 +48,16 @@
       }
     }
 
-    &__description ul {
-      line-height: 1.2rem;
-      font-size: 0.7;
+    &__description p {
       font-weight: 400;
+      width: 50%;
+      line-height: 1.4rem;
+    }
+
+    &__carrosselvertical {
+      height: 5rem;
+      width: 6rem;
+      background-color: red;
     }
 
   }
@@ -66,9 +79,10 @@
   &__right {
     font-size: 1.2rem;
     flex: 0.8;
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
     display: flex;
     flex-direction: column;
+
 
     p {
       color: #fff;
@@ -76,7 +90,7 @@
     }
 
     h3 {
-      color: #fff;
+      color: $colorprimarylight;
       font-weight: 600;
     }
 
@@ -86,7 +100,7 @@
       background-color: $colorprimary;
       color: #fff;
       border: none;
-      border-radius: 0;
+      border-radius: 0.2rem;
 
       font-size: 1rem;
       text-transform: uppercase;
@@ -103,6 +117,21 @@
 
       margin-top: 2rem;
 
+      p {
+        font-weight: 500;
+      }
+
+      &__icon {
+        margin-left: 0.4rem;
+        background-color: $colorprimarylight;
+        font-size: 1rem;
+        padding: 0.3rem;
+        border: none;
+        border-radius: 0.2rem;
+        color: #fff;
+
+      }
+
       &__btnoption {
         width: 1.6rem;
         height: 1.6rem;
@@ -110,6 +139,7 @@
         text-align: center;
         border: none;
         border-radius: 60%;
+        font-weight: 600;
       }
     }
   }

@@ -26,47 +26,49 @@ const Login = () => {
 	};
 
 	return (
-		<div className="container">
+		<>
 			<Header />
-			<div className="content">
-				<form onSubmit={handleSubmit} className="form">
-					<label>Email</label>
-					<div className="form__group">
-
-						<input
-							type="text"
-							onChange={(e) => setEmail(e.target.value)}
-							value={email}
-							required
-						/>
-					</div>
-					<label>Senha</label>
-					<div className="form__group">
-
-						<input
-							type="password"
-							onChange={(e) => setPassword(e.target.value)}
-							value={password}
-							required
-						/>
-					</div>
-					{error && (
+			<div className="container">
+				<div className="content">
+					<h3>Login</h3>
+					<form onSubmit={handleSubmit} className="form">
+						<label>Email</label>
 						<div className="form__group">
-							<span>Credenciais inválidas!</span>
+							<input
+								type="text"
+								onChange={(e) => setEmail(e.target.value)}
+								value={email}
+								required
+							/>
 						</div>
-					)}
-					<div className="form__group">
-						<button type="submit" className="form__btn">
-							Login
-						</button>
-					</div>
-				</form>
-				<a className="signup" href="/">
-					Não possui conta? Cadastre-se aqui
-				</a>
+						<label>Senha</label>
+						<div className="form__group">
+
+							<input
+								type="password"
+								onChange={(e) => setPassword(e.target.value)}
+								value={password}
+								required
+							/>
+						</div>
+						{error && (
+							<div className="form__group">
+								<span>Credenciais inválidas!</span>
+							</div>
+						)}
+						<div className="form__group">
+							<button type="submit" className="form__btn">
+								Login
+							</button>
+						</div>
+					</form>
+					<a className="signup" href="/cadastro">
+						Não possui conta? Cadastre-se aqui
+					</a>
+				</div>
 			</div>
 			<Footer />
-		</div>
+		</>
 	);
 };
 

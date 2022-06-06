@@ -3,12 +3,13 @@ import './styles.scss';
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">
-
-      </div>
       <div className="title">
         <h3>Porpoise Sports</h3>
       </div>
+      <div className="logo">
+
+      </div>
+
       <nav>
         <ul className="navbar">
           <li className="navbaritem"><a href="/">Home</a></li>
