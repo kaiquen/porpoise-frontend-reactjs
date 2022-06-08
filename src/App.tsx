@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './global/global.scss'
 import Cadastro from './pages/cadastro';
+import Cart from './pages/carrinho';
 
 import Home from './pages/home';
 import Login from './pages/login';
@@ -14,6 +15,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="produto/:id" element={<Produtos />} />
+        <Route path="carrinho" element={<Cart />} />
         <Route path="cadastro" element={<Cadastro />} />
       </Routes>
     </BrowserRouter>

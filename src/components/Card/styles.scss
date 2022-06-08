@@ -1,4 +1,3 @@
-
 .card {
   background-color: var(--primary-color);
   display: grid;
@@ -17,16 +16,16 @@
   }
 
   &__name {
-    grid-row: 1 / 2;
+    grid-row: 1 / 3;
     grid-column: 1 / -1;
     justify-self: center;
     align-self: end;
     z-index: 3;
-    width: 80%;
-    //	font-family: $font-display;
-    font-size: 1.4rem;
+
+    padding: 1rem;
+    font-size: 1.2rem;
     text-align: center;
-    padding: 1.25rem;
+
     background-color: red;
     color: #fff;
     font-weight: 400;
