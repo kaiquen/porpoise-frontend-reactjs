@@ -1,3 +1,4 @@
+import { platform } from 'os';
 import './styles.scss';
 
 interface IInput {
@@ -5,9 +6,11 @@ interface IInput {
     type: string;
     value: string;
     setValue: any;
+    className?: string | undefined
 }
 
-const Input = ({type, label,value, setValue}:IInput) => {
+const Input = ({type, label,value, setValue, className}:IInput) => {
+
     return (
         <div className="input">
             <label className="input__label">{label}</label>
@@ -16,6 +19,8 @@ const Input = ({type, label,value, setValue}:IInput) => {
                 type={type}
                 onChange={(e) => setValue(e.target.value)}
                 value={value}
+                className={`input__input ${className}`}
+                placeholder={type === 'tel' ? '(__)____-____':''}
                 required
             />
         </div>

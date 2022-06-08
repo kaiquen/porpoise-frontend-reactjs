@@ -1,4 +1,3 @@
-
 .login {
   width: 100vw;
   height: 100vh;
@@ -6,30 +5,23 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.heading__primary {
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-}
 
 .content {
-  width: 26rem;
   margin: 0 auto;
   padding: 2rem 2rem 1.6rem 2rem;
   border-radius: .5rem;
   background-color: var(--primary-color);
 }
 
-
+#form__login {
+  width: 32rem;
+}
 
 .form {
-  margin-top: 1rem;
-
   &__group {
     display: inline-block;
     width: 100%;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem;;
     span {
       float: left;
       color: #fff;
@@ -39,10 +31,3 @@
   }
 }
 
-.signup {
-  color: #fff;
-}
-
-.signup:hover {
-  color:red;
-}

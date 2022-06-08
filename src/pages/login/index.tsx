@@ -33,7 +33,7 @@ const Login = () => {
 				<div className="content">
 					<h3 className="heading__primary">Login</h3>
 					
-					<form onSubmit={handleSubmit} className="form">
+					<form onSubmit={handleSubmit} className="form" id="form__login">
 						<div className="form__group">
 							<Input type='text' label="Email" value={email} setValue={setEmail}/>
 						</div>
@@ -49,15 +49,15 @@ const Login = () => {
 						)}
 			
 						<div className="form__group">
-							<Button  title='Entrar'/>
-						</div>		
+							<Button type="submit" title='Entrar'/>
+						</div>	
 
 						<div className="form__group">
-							<Button className="white" title='Cadastrar'/>
-						</div>			
+							<Button type="button" className="white" title='Cadastrar' onClick={() => navigate('/cadastro')}/>
+						</div>	
 					</form>
+					
 				</div>
-			
 			<Footer />
 		</div>
 	);
