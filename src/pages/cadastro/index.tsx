@@ -18,7 +18,7 @@ const Cadastro = () => {
       <div className="container">
 
         <div className="content">
-          <h3>Cadastro</h3>
+          <h3 className='heading__primary'>Cadastro</h3>
           <form className="form">
             <label>Nome</label>
             <div className="form__group">

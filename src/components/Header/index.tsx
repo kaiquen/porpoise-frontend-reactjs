@@ -1,4 +1,5 @@
 import './styles.scss';
+import  {BiUserCircle, BiCart} from 'react-icons/bi';
 
 const Header = () => {
   return (
@@ -16,7 +17,17 @@ const Header = () => {
 
       <nav>
         <ul className="navbar">
-          <li className="navbaritem"><a href="/login">Login</a></li>
+          <li className="navbar__item">
+            <a href="/login">
+              <BiUserCircle className='navbar__icon'/>
+              <p>Entre ou cadastre-se</p>
+            </a>
+          </li>
+          <li className="navbar__item">
+            <a href="/login">
+              <BiCart className='navbar__icon'/>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

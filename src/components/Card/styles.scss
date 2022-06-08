@@ -1,7 +1,6 @@
-@import '../../global/variables.scss';
 
 .card {
-  background-color: $colorprimary;
+  background-color: var(--primary-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.5rem;
@@ -28,7 +27,7 @@
     font-size: 1.4rem;
     text-align: center;
     padding: 1.25rem;
-    background-color: $colorprimarydark;
+    background-color: red;
     color: #fff;
     font-weight: 400;
     transform: translateY(50%);

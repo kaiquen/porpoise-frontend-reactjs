@@ -13,7 +13,6 @@ const Input = ({type, label,value, setValue}:IInput) => {
             <label className="input__label">{label}</label>
 						
             <input
-                className="input__input"
                 type={type}
                 onChange={(e) => setValue(e.target.value)}
                 value={value}

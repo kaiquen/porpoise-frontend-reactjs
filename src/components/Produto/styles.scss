@@ -1,10 +1,9 @@
-@import '../../global/variables.scss';
 
 .product__items {
   display: flex;
   justify-content: space-evenly;
 
-  background-color: $colorbackground;
+  background-color: red;
 
   input {
 
@@ -25,7 +24,7 @@
     text-align: start;
 
     &__title {
-      color: $colorgreylight1;
+      color: red;
       font-weight: 600;
 
 
@@ -90,14 +89,14 @@
     }
 
     h3 {
-      color: $colorprimarylight;
+      color: red;
       font-weight: 600;
     }
 
     &__btn {
       margin-top: 2rem;
       width: 60%;
-      background-color: $colorprimary;
+      background-color: var(--primary-color);
       color: #fff;
       border: none;
       border-radius: 0.2rem;
@@ -109,7 +108,7 @@
       transition: all 0.2s;
 
       &:hover {
-        background-color: $colorprimarydark;
+        background-color: var(--primary-color);
       }
     }
 
@@ -123,7 +122,7 @@
 
       &__icon {
         margin-left: 0.4rem;
-        background-color: $colorprimarylight;
+        background-color: var(--primary-color);
         font-size: 1rem;
         padding: 0.3rem;
         border: none;

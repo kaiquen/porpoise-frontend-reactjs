@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Footer } from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input/intex";
+import { Button } from "../../components/Button";
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -48,15 +49,13 @@ const Login = () => {
 						)}
 			
 						<div className="form__group">
-							<button type="submit" className="form__btn">
-								Entrar
-							</button>
-						</div>						
-					</form>
+							<Button  title='Entrar'/>
+						</div>		
 
-					<a className="signup" href="/cadastro">
-						Não possui conta? Cadastre-se aqui
-					</a>
+						<div className="form__group">
+							<Button className="white" title='Cadastrar'/>
+						</div>			
+					</form>
 				</div>
 			
 			<Footer />

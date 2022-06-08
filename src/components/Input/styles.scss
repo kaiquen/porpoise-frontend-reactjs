@@ -1,16 +1,14 @@
-@import '../../global/variables.scss';
 
 .input {
-    
     &__label {
         float: left;
         font-size: 1.2rem;
-        color: #fff;
+        color: red;
     }
-    &__input {
-        
+
+    input {
         width: 100%;
-        height: 2rem;
+        height: 3rem;
         
         margin-top: 0.4rem;
         padding: 1rem;
