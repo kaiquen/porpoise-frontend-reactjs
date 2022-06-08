@@ -9,16 +9,15 @@
 .heading__primary {
   text-align: center;
   font-size: 2rem;
-  color: red;
+  color: #fff;
 }
 
 .content {
-  
   width: 26rem;
   margin: 0 auto;
   padding: 2rem 2rem 1.6rem 2rem;
   border-radius: .5rem;
-  background-color: var(--color-secondary);
+  background-color: var(--primary-color);
 }
 
 

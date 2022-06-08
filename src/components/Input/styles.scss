@@ -3,16 +3,16 @@
     &__label {
         float: left;
         font-size: 1.2rem;
-        color: red;
+        color: #fff;
     }
 
     input {
+        color: var(--primary-color-dark);
+        font-size: 1.2rem;
         width: 100%;
         height: 3rem;
-        
         margin-top: 0.4rem;
         padding: 1rem;
-        
         border: none;
         border-radius: .2rem;
     }

@@ -1,11 +1,12 @@
 
 :root {
   --primary-color: #0F4459;
-  --primary-color-light: #C2D6D7;
+  --primary-color-light: #c2d6d7b0;
   --primary-color-dark: #00091D;
- 
-  --secondary-color: #27400E;
-  --secondary-color-dark:#172601;
+  
+  --secondary-color-light: #6B7A55;
+  --secondary-color: #4A5D32;
+  --secondary-color-dark:#17330C;
 
   --tertiary-color: #BF9780;
   
@@ -14,10 +15,8 @@
   --color-grey-dark: #333;
   --color-grey: #777;
   --color-grey-light: #999;
-
 }
  
-
 *,
 *::after,
 *::before {
@@ -33,7 +32,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color-light);
 }
 
 li,
