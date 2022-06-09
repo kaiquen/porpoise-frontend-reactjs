@@ -11,19 +11,26 @@ const Cart = () => {
       <div className="cart">
         <Header />
         <h3 className="pagetitle">Carrinho(1)</h3>
-        <div className="cart__card">
-          <img src="./assets/flu.png" alt="" />
-          <div className="cart__card__left">
-            <div className="cart__card__left__title">
-              <h3>Camisa Fluminense</h3>
-              <AiFillMinusCircle />
-              <p>1</p>
-              <BsFillPlusCircleFill />
-              <BsFillTrashFill />
+        <div className="container">
+          <div className="cart__card">
+            <img src="./assets/flu.png" alt="" />
+            <div className="cart__card__left">
+              <div className="cart__card__left__title">
+                <h3 className="cart__card__left__title__productname">Camisa Fluminense</h3>
+                <div className="cart__card__left__title__icons">
+                  <AiFillMinusCircle className="cart__card__left__title__icons__icon" />
+                  <p className="cart__card__left__title__icons__number">1</p>
+                  <BsFillPlusCircleFill className="cart__card__left__title__icons__icon" />
+                  <BsFillTrashFill className="cart__card__left__title__icons__icon" />
+                </div>
+              </div>
+              <p className="cart__card__left__title__productsize">Descrição</p>
+              <p className="cart__card__left__title__productsize">Tamanho M</p>
+              <p className="cart__card__left__title__productprice">RS25.000</p>
             </div>
-            <p>Tamanho M</p>
-            <p>RS25.000</p>
           </div>
+
+
           <div className="cart__card__right">
             <h3>Resumo do Pedido</h3>
             <div className="cart__card__right__total">
@@ -31,12 +38,13 @@ const Cart = () => {
               <p>R$25.00</p>
             </div>
             <div className="cart__card__right__total">
-              <p>Total</p>
-              <p>R$25.000</p>
+              <p >Total</p>
+              <p className="cart__card__right__total__number">R$25.000</p>
             </div>
             <Button title='Comprar' />
           </div>
         </div>
+
         <Footer />
       </div>
     </>
