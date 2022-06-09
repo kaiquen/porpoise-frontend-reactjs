@@ -1,10 +1,11 @@
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
-import './styles.scss';
-import { Produto } from '../../components/Produto';
+
+import styles from './styles.module.scss';
 import { useEffect, useState } from 'react';
 import api from '../../services/axios';
 import { useParams } from 'react-router-dom';
+import { Produto } from '../../components/Produto';
+import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
 
 interface IProduct {
   id:string;
@@ -13,11 +14,11 @@ interface IProduct {
 	description:string;
 	brand:string;
 	price:number;
-	size:number;
+	size:string;
 	subcategory:string;
 };
 
-const Produtos = () => {
+const Info = () => {
   const [product, setProduct] = useState<IProduct>();
 
   const params = useParams();
@@ -29,14 +30,13 @@ const Produtos = () => {
     })()
   }, [])
 
-
   return (
-    <>
-      <Header />
-      { product && <Produto {...product}/>}
-      <Footer />
-    </>
+    <div className={styles.container}>
+      <Header/>
+      {product && <Produto {...product}/>}
+      <Footer/>
+    </div>
   )
 }
 
-export default Produtos;
+export default Info;

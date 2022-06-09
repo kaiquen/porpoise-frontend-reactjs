@@ -2,7 +2,7 @@
 import { Card } from '../../components/Card';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import './styles.scss';
+import styles from './styles.module.scss';
 import { useEffect, useState } from 'react';
 import api from '../../services/axios';
 
@@ -13,7 +13,7 @@ interface IProduct {
 	description:string;
 	brand:string;
 	price:number;
-	size:number;
+	size:string;
 	subcategory:string;
 };
 
@@ -29,21 +29,23 @@ const Home = () => {
 	},[])
 	
 	return (
-		<>
-			<section >
-				<Header />
-			</section>
-
-			<section className="products">
-				{
+		<div className={styles.container}>
+			<Header />
+		
+			<section className={styles.products}>
+			
+				{	
+					products.length > 0 ?  
 					products.map((item) => {
 						return <Card {...item}/>
-					})
+					}) 
+					:
+					<h3 className='heading__primary heading__primary--blue'>Error...</h3>
 				}
 			</section>
 
 			<Footer />
-		</>
+		</div>
 	)
 }
 

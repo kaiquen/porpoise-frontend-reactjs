@@ -6,19 +6,22 @@ import Cart from './pages/carrinho';
 
 import Home from './pages/home';
 import Login from './pages/login';
-import Produtos from './pages/produtos';
+import Info from './pages/info';
 
 const App = () => {
+  
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="produto/:id" element={<Produtos />} />
-        <Route path="carrinho" element={<Cart />} />
-        <Route path="cadastro" element={<Cadastro />} />
-      </Routes>
-    </BrowserRouter>
+   
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="produto/:id" element={<Info />} />
+          <Route path="carrinho" element={<Cart />} />
+          <Route path="cadastro" element={<Cadastro />} />
+        </Routes>
+      </BrowserRouter>
+  
   );
 }
 

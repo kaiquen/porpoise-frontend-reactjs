@@ -1,32 +1,28 @@
-import './styles.scss';
-import  {BiUserCircle, BiCart} from 'react-icons/bi';
+import styles from './styles.module.scss';
 
+import  {BiUserCircle, BiCart} from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
-    <header className="header">
+    <header className={styles.container}>
       
-      <div className="logo">
-        <div className="logo__box">
-          <a href="/">
-            <img src="./assets/images/logo.png" alt="" srcSet=''/>
-          </a>
-        </div>
-
-        <a className="logo__title" href="/">Porpoise Sports</a>
-      </div>
-
+      <Link to="/" className={styles.logo}>
+        <img src="../assets/images/logo.png" alt="" srcSet=''/>
+        <h1 className={styles.heading__primary}>Porpoise Sports</h1> 
+      </Link>
+      
       <nav>
-        <ul className="navbar">
-          <li className="navbar__item">
-            <a href="/login">
-              <BiUserCircle className='navbar__icon'/>
+        <ul className={styles.nav}>
+          <li>
+            <Link className={styles.nav__item}to="/login">
+              <BiUserCircle className={styles.nav__icon}/>
               <p>Entre ou cadastre-se</p>
-            </a>
+            </Link>
           </li>
-          <li className="navbar__item">
-            <a href="/login">
-              <BiCart className='navbar__icon'/>
-            </a>
+          <li>
+            <Link className={styles.nav__item}to="/carrinho">
+              <BiCart className={styles.nav__icon}/>
+            </Link>
           </li>
         </ul>
       </nav>

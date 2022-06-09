@@ -1,0 +1,45 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form {
+  margin: 0 auto;
+  width: 55rem;
+  padding: 2rem 2rem 1.6rem 2rem;
+  border-radius: .5rem;
+  background-color: var(--primary-color);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.heading__primary {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  text-align: center; 
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.group {
+  display: flex;
+  
+  &--split {
+    width: 1rem;
+  }
+}
+
+.span {
+  float: left;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+.link {
+  color: #fff;
+  margin-left: .5rem;
+}

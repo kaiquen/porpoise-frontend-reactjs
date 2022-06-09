@@ -1,0 +1,54 @@
+
+.container {
+  width: 25rem;
+  
+  background-color: var(--primary-color-dark);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  transition: all .2s ease-in;
+  
+  cursor: pointer;
+  
+  border-radius: .5rem;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:active {
+    transform: scale(.98);
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.title {
+  padding: 1rem;
+  
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+
+  background-color: var(--tertiary-color);
+  color: #fff;
+}
+
+.price {
+  padding:1rem;
+  display: flex;
+  align-items: center;
+
+  font-size: 2rem;
+  font-weight: 400;
+
+  color: #fff;
+}
+
+.icon {
+  font-size: 2.2rem;
+  margin-right: 2rem;
+}
+
+

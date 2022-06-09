@@ -1,9 +1,11 @@
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import './styles.scss';
+import styles from './styles.module.scss';
 import { useState } from 'react';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input/intex';
+import { FormGroup } from '../../components/FormGroup';
+import { Link } from 'react-router-dom';
 
 
 const Cadastro = () => {
@@ -15,45 +17,45 @@ const Cadastro = () => {
   const [birth, setBirth] = useState<string>("");
 
   return (
-    <div className='cadastro'>
+    <div className={styles.container}>
       <Header />
-        <div className="content">
-          <h3 className='heading__primary'>Cadastro</h3>
+        <div className={styles.form}>
+          <h2 className={styles.heading__primary}>Cadastro</h2>
           <form className="form" id='form__cadastro'> 
-            <div className="form__group">
+            <FormGroup>
               <Input label="Nome" type='text' value={name} setValue={setName}/>
-            </div>
-            <div className="form__group">
+            </FormGroup>
+            <FormGroup>
               <Input label="CPF" type='text' value={cpf} setValue={setCpf}/>
+            </FormGroup>
+            <div className={styles.group}>
+                <FormGroup>
+                  <Input label={"Data de nascimento"} type="date" value={birth} setValue={setBirth} className='input--date'/>
+                </FormGroup>
+              <div className={styles['group--split']}></div>
+                <FormGroup>
+                  <Input label='Telefone celular' type="tel" value={phone} setValue={setPhone} className='input--tel'/>
+                </FormGroup>
             </div>
-            <div className="form__group--row">
-              <div className="form__group">
-                <Input label={"Data de nascimento"} type="date" value={birth} setValue={setBirth} className='input--date'/>
-              </div>
-              <div className="form__group--split"></div>
-              <div className="form__group">
-                <Input label='Telefone celular' type="tel" value={phone} setValue={setPhone} className='input--tel'/>
-              </div>
-            </div>
-            <div className="form__group">
+            <FormGroup>
               <Input label="Email" type="email" value={email} setValue={setEmail} />
-            </div>
-            <div className="form__group--row">
-              <div className="form__group">
+            </FormGroup>
+            <div className={styles.group}>
+              <FormGroup>
                 <Input label="Senha" type='password' value={password} setValue={setPassword}/>
-              </div>
-              <div className="form__group--split"></div>
-              <div className="form__group">
+              </FormGroup>
+                <div className={styles['group--split']}></div>
+              <FormGroup>
                 <Input label="Confirmar senha" type='password' value={password} setValue={setPassword}/>
-              </div>
+              </FormGroup>
             </div>
-            <div className="form__group">
+            <FormGroup>
               <Button title='Cadastrar' type='submit'/>
-            </div>
+            </FormGroup>
           </form>
-          <a className="signup" href="/login">
+          <Link to='/login' className={styles.link}>
             Já possui conta? Faça seu login aqui
-          </a>
+          </Link>
         </div>
       <Footer />
     </div>

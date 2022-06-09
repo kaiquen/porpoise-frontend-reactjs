@@ -1,4 +1,4 @@
-import './styles.scss';
+import styles from'./styles.module.scss';
 
 interface IButton {
     title:string;
@@ -11,7 +11,7 @@ const Button = ({title, className, type, onClick}:IButton) => {
     return (
         <button 
             type={type} 
-            className={`btn btn--${className}` }
+            className={[styles.container, styles[`${className}`]].join(" ")}
             onClick={onClick}
         >
             {title}
