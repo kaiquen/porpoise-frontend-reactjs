@@ -30,11 +30,11 @@ const Cadastro = () => {
             </FormGroup>
             <div className={styles.group}>
                 <FormGroup>
-                  <Input label={"Data de nascimento"} type="date" value={birth} setValue={setBirth} className='input--date'/>
+                  <Input label={"Data de nascimento"} type="date" value={birth} setValue={setBirth}/>
                 </FormGroup>
               <div className={styles['group--split']}></div>
                 <FormGroup>
-                  <Input label='Telefone celular' type="tel" value={phone} setValue={setPhone} className='input--tel'/>
+                  <Input label='Telefone celular' type="tel" value={phone} setValue={setPhone}/>
                 </FormGroup>
             </div>
             <FormGroup>

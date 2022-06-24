@@ -8,6 +8,10 @@
     padding: 1rem;
     border: none;
     border-radius: .1rem;
+
+    &--border {
+        border: .1rem solid black;
+    }
 }
 
 
@@ -16,4 +20,8 @@
     float: left;
     font-size: 1.6rem;
     color: #fff;
+
+    &--black {
+        color: var(--color-text);
+    }
 }

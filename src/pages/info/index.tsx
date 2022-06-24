@@ -16,6 +16,7 @@ interface IProduct {
 	price:number;
 	size:string;
 	subcategory:string;
+  count:0;
 };
 
 const Info = () => {

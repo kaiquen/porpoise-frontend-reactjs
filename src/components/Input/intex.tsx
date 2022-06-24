@@ -5,19 +5,20 @@ interface IInput {
     type: string;
     value: string;
     setValue: any;
-    className?: string | undefined
+    inputClassName?: string;
+    labelClassName?:string;
 }
 
-const Input = ({type, label,value, setValue, className}:IInput) => {
+const Input = ({type, label,value, setValue, labelClassName, inputClassName}:IInput) => {
     return (
         <div className={styles.container}>
-            <label className={styles.label}>{label}</label>
+            <label className={[styles.label, styles[`label${labelClassName}`]].join(' ')}>{label}</label>
 						
             <input
                 type={type}
                 onChange={(e) => setValue(e.target.value)}
                 value={value}
-                className={styles.input}
+                className={[styles.input, styles[`input${inputClassName}`]].join(' ')}
                 placeholder={type === 'tel' ? '(__)____-____':''}
                 required
             />

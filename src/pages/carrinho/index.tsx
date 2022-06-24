@@ -1,53 +1,63 @@
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Button } from "../../components/Button";
-import { BsFillPlusCircleFill, BsFillTrashFill } from 'react-icons/bs';
-import { AiFillMinusCircle } from "react-icons/ai";
-import './styles.scss';
+import styles from './styles.module.scss';
+import { CardCart } from "../../components/CardCart";
+import { useCarrinho } from "../../hooks/useCarrinho";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+
+  const { total,carrinho } = useCarrinho();
+  const navigate  = useNavigate();
+  const handlePagamento = () => {
+    navigate('/pagamento')
+  }
+
+
   return (
-    <>
-      <div className="cart">
+    <div className={styles.container}>
         <Header />
-        <h3 className="pagetitle">Carrinho(1)</h3>
-        <div className="container">
-          <div className="cart__card">
-            <img src="./assets/flu.png" alt="" />
-            <div className="cart__card__left">
-              <div className="cart__card__left__title">
-                <h3 className="cart__card__left__title__productname">Camisa Fluminense</h3>
-                <div className="cart__card__left__title__icons">
-                  <AiFillMinusCircle className="cart__card__left__title__icons__icon" />
-                  <p className="cart__card__left__title__icons__number">1</p>
-                  <BsFillPlusCircleFill className="cart__card__left__title__icons__icon" />
-                  <BsFillTrashFill className="cart__card__left__title__icons__icon" />
-                </div>
-              </div>
-              <p className="cart__card__left__title__productsize">Descrição</p>
-              <p className="cart__card__left__title__productsize">Tamanho M</p>
-              <p className="cart__card__left__title__productprice">RS25.000</p>
+        <div className={styles.cart}>
+          <div className={styles.cart__left}>
+            <div className={styles.cart__header}>
+              <ul className={styles.header}>
+                <li className={styles.header__item}>Meu Carrinho</li>
+                <li className={styles.header__item}>Quantidade</li>
+                <li className={styles.header__item}>Unitário</li>
+                <li className={styles.header__item}>total</li>
+              </ul>
             </div>
+            {
+              carrinho.map(item =>  <CardCart {...item}/>)
+            }
           </div>
 
 
-          <div className="cart__card__right">
-            <h3>Resumo do Pedido</h3>
-            <div className="cart__card__right__total">
-              <p>Envio</p>
-              <p>R$25.00</p>
+          <div className={styles.cart__right}>
+            <h3 className={styles.heading__tertiary}>Resumo do Pedido</h3>
+            <div className={styles.summary}>
+              <span>Subtotal:</span>
+              <p>R$ {total}</p>
             </div>
-            <div className="cart__card__right__total">
-              <p >Total</p>
-              <p className="cart__card__right__total__number">R$25.000</p>
+            <div className={styles.summary}>
+              <span>Frete:</span>
+              <p>R$0</p>
             </div>
-            <Button title='Comprar' />
+            <div className={styles.summary}>
+              <span>Desconto:</span>
+              <p>R$0</p>
+            </div>
+            <div className={styles.summary}>
+              <span>Total:</span>
+              <p>R$ {total}</p>
+            </div>
+            <Button onClick={handlePagamento}title='Continuar' className="green"/>
           </div>
         </div>
 
         <Footer />
-      </div>
-    </>
+    </div>
   )
 }
 

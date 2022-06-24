@@ -19,9 +19,23 @@ interface IProduct {
 
 const Produto = (product: IProduct) => {
   const { carrinho, setCarrinho } = useCarrinho();
-  const [ tamanho, setTamanho ] = useState(false);
+
   const handleStore = () => {
-    setCarrinho([...carrinho, product]);
+    const car = carrinho.filter(item => item.id === product.id);
+    
+    if(car[0]) {
+      carrinho.map((item, index) => {
+        if(item.id === car[0].id) {
+          const data = carrinho.filter(item => item.id !== product.id);
+          item.count += 1;
+          data.push(item);
+          setCarrinho(data);
+        }
+      })
+    } else {
+      const data = Object.assign({count:1}, product);
+      setCarrinho([...carrinho, data]);
+    }
   };
 
   return (
